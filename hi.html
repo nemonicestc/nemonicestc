@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+		<title>Nemon</title>
+	    <meta charset="utf-8">
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- Logo bank -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<!-- AOS -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style>	
+	html {
+		  scroll-behavior: smooth;
+		}
+	ul {
+			  list-style-type: none;
+			  margin: 10px;
+			  padding: 1px;
+			}
+			#rcorners1 {
+			  border-radius: 25px;
+			  background: #73AD21;
+			  padding: 20px; 
+			  width: 200px;
+			  height: 150px;  
+			}	
+		* {box-sizing: border-box;}
+
+	body { 
+		  margin: 0;
+		  font-family: 'Montserrat';
+		}
+
+	/*Head*/
+		#navbar {
+		  overflow: hidden;
+		  padding: 30px 50px;
+		  transition: 0.4s;
+		  position: fixed;
+		  width: 100%;
+		  top: 0;
+		  z-index: 99;
+		}
+
+		#navbar a {
+		  float: left;
+		  color: black;
+		  text-align: center;
+		  padding: 12px;
+		  text-decoration: none;
+		  font-size: 18px; 
+		  line-height: 25px;
+		  border-radius: 4px;
+		}
+
+		#navbar #logo {
+		  font-size: 35px;
+		  font-weight: bold;
+		  transition: 0.4s;
+		}
+		#navbar #logo:hover {
+		  opacity: 70%;
+		  transition: 0.4s;
+		}
+
+		#navbar a.active {
+		  color: black;
+		}
+
+		#navbar-right {
+		  float: right;
+		}
+
+		@media screen and (max-width: 580px) {
+		  #navbar {
+		    padding: 20px 10px !important;
+		  }
+		  #navbar a {
+		    float: none;
+		    display: block;
+		    text-align: left;
+		  }
+		  #navbar-right {
+		    float: none;
+		  }
+		}
+
+		.info:hover{
+			opacity: 70%;
+			transition: .5s ease;
+		}
+	/*Social*/
+		.icon-bar {
+		  position: fixed;
+		  top: 50%;
+		  right: 2%;
+		  -webkit-transform: translateY(-50%);
+		  -ms-transform: translateY(-50%);
+		  transform: translateY(-50%);
+		}
+
+		.icon-bar a {
+		  display: block;
+		  text-align: center;
+		  padding: 10px;
+		  transition: all 0.7s ease;
+		  color: black;
+		  font-size: 15px;
+		  border-radius: 100px;
+		  width: 42px;
+		  margin: 10px 10px;
+		}
+
+		.icon-bar a:hover {
+		  background-color: #000;
+		  color: white;
+		}
+
+		.facebook {
+		  background: #EAE4CA;
+		  color: black;
+		}
+
+		.youtube {
+		  background: #EAE4CA;
+		  color: white;
+		}
+
+		.behance {
+		  background: #EAE4CA;
+		  color: white;
+		}
+	/*Navbar*/
+		.nav-bar {
+		  position: fixed;
+		  top: 50%;
+		  left: 2%;
+		  -webkit-transform: translateY(-50%);
+		  -ms-transform: translateY(-50%);
+		  transform: translateY(-50%);
+		  font-size: 12px;
+		  text-align: center;
+		  margin: 10px 10px;
+		}
+
+		.nav-bar button{
+			display: block;
+		  	text-align: center;
+		  	transition: all 0.7s ease;
+		  	color: #878787;
+		  	font-size: 15px;
+		  	width: 40px;
+			background: transparent;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 30px 0px;
+			margin-top: 50px;
+			transform:rotate(-90deg);
+		}
+
+		.nav-bar button:hover{
+			color: black;}
+
+
+		.nav-bar button:active{
+			color: #FF7F00;}
+		.hero{
+			width: 80%;
+			height: 900px;
+			position: relative;
+			margin: auto;
+			overflow: hidden;
+		}
+		.content{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: auto;
+			position: absolute;
+			transform: translate(110%);
+		}
+		.content-right img{
+			width: 950px;
+		}
+		.content-left{
+			flex-basis: 50%;
+			margin: 100px;
+		}
+		.content-left p{
+			font-size: 16px;
+			padding: 10px 0px;
+		}
+		.content-left a{
+			width: 150px;
+			display: block;
+			padding: 8px 5px;
+			border-radius: 50%;
+			text-decoration: none;
+			background-color: #FF7F00;
+			color: #fff;
+			text-align: center;
+		}
+		.content-right{
+			flex-basis: 100%;
+			text-align: center;
+		}
+
+		#content1 {
+			transform: translateX(0);
+		}
+
+		.avatar {
+		  vertical-align: middle;
+		  border-radius: 50%;
+		}
+	/*hidden content*/
+		* {box-sizing: border-box;}
+
+		input[type=text], select, textarea {
+		  width: 100%;
+		  padding: 12px;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		  margin-top: 6px;
+		  margin-bottom: 16px;
+		  resize: vertical;
+		}
+
+		input[type=submit] {
+		  background-color: #082247;
+		  color: white;
+		  padding: 12px 20px;
+		  border: none;
+		  border-radius: 4px;
+		  cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+		  background-color: #45a049;
+		}
+
+		.container {
+		  border-radius: 5px;
+		  background-color: #f2f2f2;
+		  padding: 20px;
+		}
+	background-color: #FFFFFF;}
+	</style>
+
+	<script>
+	</script>
+</head>
+
+<body>
+<!-- Head -->
+	<div id="navbar">
+		<div data-aos="fade-down">
+		<a href="index.html" id="logo"><img src="images/logo.png" alt="Nemon" width="30"></a>
+		</div>
+		<div id="navbar-right">
+			<div data-aos="fade-zoom-in"
+			     data-aos-easing="ease-in-back"
+			     data-aos-delay="300"
+			     data-aos-offset="0">
+		    <a class="info" href="#info">say hi.</a>
+		    </div>
+		</div>
+	</div>
+<!-- Navbar -->
+  <div class="hero">
+	<div class="nav-bar">
+	  <div 	data-aos="fade-right">
+		<a href="index.html"><button style="position:relative; top:80px;">hello!!</button></a>
+		<a href="me.html"><button style="position:relative; top:50px;">me ?</button></a>
+		<a href="3d.html"><button style="position:relative; top:30px;">3D</button></a>
+		<a href="uxui.html"><button >ux-ui</button></a>
+		<a href="ill.html"><button >illustration</button></a>
+	  </div>
+	</div>
+
+	<div id="content1" class="content">
+		<div class="content-left">
+
+			<h1 	data-aos="fade-right"
+			     	data-aos-delay="300">Contact me</h1>
+			<p 		data-aos="fade-right"
+			     	data-aos-delay="400">Let's work together</p>
+	<div class="icon-bar" data-aos="fade-up">
+	  <a href="https://www.facebook.com/ngoc.nemon/" class="facebook"><i class="fa fa-facebook"></i></a>
+	  <a href="https://www.youtube.com/channel/UCT5w727hLdEUUq2gMO4xliw" class="youtube"><i class="fa fa-play"></i></a> 
+	  <a href="https://www.behance.net/nemonicvchann" class="behance"><i class="fa fa-behance"></i></a>
+	</div>
+
+		</div>
+		<div class="content-right" style="position:relative; top:200px; left: 200px;">
+			<div class="container" style="text-align: left;">
+			  <form action="/action_page.php">
+			    <label for="name">Name</label>
+			    <input type="text" id="name" name="name" placeholder="What is your name?">
+			    <label for="Email">Email</label>
+			    <input type="text" id="mail" name="mail" placeholder="Easier to contact">
+			    <label for="subject">Subject</label>
+			    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+			    <input type="submit" value="Submit">
+			  </form>
+			</div>
+		</div>
+	</div>
+
+  <script>
+  		AOS.init({
+  			duration: 1400,
+  		})
+  </script>

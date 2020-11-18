@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+		<title>Nemon</title>
+	    <meta charset="utf-8">
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- Logo bank -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<!-- AOS -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style>	
+	html {
+		  scroll-behavior: smooth;
+		}
+	ul {
+			  list-style-type: none;
+			  margin: 10px;
+			  padding: 1px;
+			}
+			#rcorners1 {
+			  border-radius: 25px;
+			  background: #73AD21;
+			  padding: 20px; 
+			  width: 200px;
+			  height: 150px;  
+			}	
+		* {box-sizing: border-box;}
+
+	body { 
+		  margin: 0;
+		  font-family: 'Montserrat';
+		}
+
+	/*Head*/
+		#navbar {
+		  overflow: hidden;
+		  padding: 30px 50px;
+		  transition: 0.4s;
+		  position: fixed;
+		  width: 100%;
+		  top: 0;
+		  z-index: 99;
+		}
+
+		#navbar a {
+		  float: left;
+		  color: black;
+		  text-align: center;
+		  padding: 12px;
+		  text-decoration: none;
+		  font-size: 18px; 
+		  line-height: 25px;
+		  border-radius: 4px;
+		}
+
+		#navbar #logo {
+		  font-size: 35px;
+		  font-weight: bold;
+		  transition: 0.4s;
+		}
+		#navbar #logo:hover {
+		  opacity: 70%;
+		  transition: 0.4s;
+		}
+
+		#navbar a.active {
+		  color: black;
+		}
+
+		#navbar-right {
+		  float: right;
+		}
+
+		@media screen and (max-width: 580px) {
+		  #navbar {
+		    padding: 20px 10px !important;
+		  }
+		  #navbar a {
+		    float: none;
+		    display: block;
+		    text-align: left;
+		  }
+		  #navbar-right {
+		    float: none;
+		  }
+		}
+
+		.info:hover{
+			opacity: 70%;
+			transition: .5s ease;
+		}
+	/*Social*/
+		.icon-bar {
+		  position: fixed;
+		  top: 50%;
+		  right: 2%;
+		  -webkit-transform: translateY(-50%);
+		  -ms-transform: translateY(-50%);
+		  transform: translateY(-50%);
+		}
+
+		.icon-bar a {
+		  display: block;
+		  text-align: center;
+		  padding: 10px;
+		  transition: all 0.7s ease;
+		  color: black;
+		  font-size: 15px;
+		  border-radius: 100px;
+		  width: 42px;
+		  margin: 10px 10px;
+		}
+
+		.icon-bar a:hover {
+		  background-color: #000;
+		  color: white;
+		}
+
+		.facebook {
+		  background: #EAE4CA;
+		  color: black;
+		}
+
+		.youtube {
+		  background: #EAE4CA;
+		  color: white;
+		}
+
+		.behance {
+		  background: #EAE4CA;
+		  color: white;
+		}
+	/*Navbar*/
+		.nav-bar {
+		  position: fixed;
+		  top: 50%;
+		  left: 2%;
+		  -webkit-transform: translateY(-50%);
+		  -ms-transform: translateY(-50%);
+		  transform: translateY(-50%);
+		  font-size: 12px;
+		  text-align: center;
+		  margin: 10px 10px;
+		}
+
+		.nav-bar button{
+			display: block;
+		  	text-align: center;
+		  	transition: all 0.7s ease;
+		  	color: #878787;
+		  	font-size: 15px;
+		  	width: 40px;
+			background: transparent;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 30px 0px;
+			margin-top: 50px;
+			transform:rotate(-90deg);
+		}
+
+		.nav-bar button:hover{
+			color: black;}
+
+
+		.nav-bar button:active{
+			color: #FF7F00;}
+
+		.content{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: auto;
+			position: absolute;
+		}
+		.content-right img{
+			width: 950px;
+		}
+		.content-left{
+			flex-basis: 50%;
+			margin: 100px;
+		}
+		.content-left p{
+			font-size: 16px;
+			padding: 1px 0px;
+		}
+		.content-left a{
+			width: 150px;
+			display: block;
+			padding: 8px 5px;
+			border-radius: 50%;
+			text-decoration: none;
+			background-color: #FF7F00;
+			color: #fff;
+			text-align: center;
+		}
+		.content-right{
+			flex-basis: 50%;
+			text-align: center;
+		}
+
+		#content1 {
+			transform: translateX(0);
+		}
+
+		.avatar {
+		  vertical-align: middle;
+		  border-radius: 50%;
+		}
+	/*hidden content*/
+
+	background-color: #FFFFFF;}
+	</style>
+
+	<script>
+	</script>
+</head>
+
+<body>
+<!-- Head -->
+	<div id="navbar">
+		<a href="index.html" id="logo"><img src="images/logo.png" alt="Nemon" width="30"></a>
+		<div id="navbar-right">
+		    <a class="info" href="hi.html">say hi.</a>
+		</div>
+	</div>
+<!-- Social -->
+	<div class="icon-bar">
+	  <a href="https://www.facebook.com/ngoc.nemon/" class="facebook"><i class="fa fa-facebook"></i></a>
+	  <a href="https://www.youtube.com/channel/UCT5w727hLdEUUq2gMO4xliw" class="youtube"><i class="fa fa-play"></i></a> 
+	  <a href="https://www.behance.net/nemonicvchann" class="behance"><i class="fa fa-behance"></i></a>
+	</div>
+
+<!-- Navbar -->
+	<div class="nav-bar">
+		<a href="index.html"><button style="position:relative; top:80px;">hello!!</button></a>
+		<a href="me.html"><button style="position:relative; top:50px;">me ?</button></a>
+		<a href="3d.html"><button style="position:relative; top:30px;">3D</button></a>
+		<a href="uxui.html"><button >ux-ui</button></a>
+		<a href="ill.html"><button >illustration</button></a>
+	</div>
+	<div id="content2" class="content" style="position:relative; width: 1500px; top: 50px" >
+		<div class="content-left">
+          <img src="images/avatar.jpg" style="width:30%" alt="Avatar" class="avatar"
+          		data-aos="fade-right">
+            <h2 style="position:relative;" data-aos="fade-right">Trinh Hoang Ngoc</h2>
+        <div data-aos="fade-right"
+        	data-aos-delay="200">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Designer</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Hanoi. VN</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>nemonice.stc@gmail.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>0866006176
+          <hr>
+         </div>
+        <div data-aos="fade-right"
+        	 data-aos-delay="100">  	
+		<p>3D</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+          </div>
+          </div>
+        <div data-aos="fade-right"
+        	data-aos-delay="200">
+        <p>Ux - Ui</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">70%</div>
+          </div>
+          </div>
+        <div data-aos="fade-right"
+        	data-aos-delay="300">
+         <p>Illustration</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+          </div>
+          </div>
+        </div>
+        <div class="content-right">
+		<div class="w3-container w3-card w3-white" style="text-align: left; position:relative; right:50px; top: 30px">
+			<h2 class="w3-text-grey w3-padding-16" data-aos="fade-left"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+        <div class="w3-container" data-aos="fade-left">
+          <h5 class="w3-opacity" ><b>3D Graphic Designer / Onteractive</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>April 2020 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+          <p>Work with Onteractive for clients from Healthcare to SmartBanking</p>
+          <hr>
+        </div>
+        <div class="w3-container" data-aos="fade-left">
+          <h5 class="w3-opacity" ><b>Color Up leader / FPT University</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2018</h6>
+          <p>Working as a graphic design leader for FPT University's Color Up Team </p><br>
+        </div>
+        <h2 class="w3-text-grey w3-padding-16" data-aos="fade-left"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <div class="w3-container" data-aos="fade-left">
+          <h5 class="w3-opacity"><b>FPT UNIVERSITY</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2017-2021</h6>
+          <p>Graphic Design of FPT University - Bachelor of Art</p>
+          <hr>
+        </div>
+
+	</div>
+
+  <script>
+  		AOS.init({
+  			duration: 1400,
+  		})
+  </script>
